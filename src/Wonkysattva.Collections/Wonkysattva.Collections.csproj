@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6;net7;net8</TargetFrameworks>
-    <Nullable>enable</Nullable>
     <PackageId>Wonkysattva.Collections</PackageId>
     <Version>1.0.0-alpha.1</Version>
     <Authors>Wonkysattva</Authors>
@@ -13,6 +12,11 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
