@@ -8,6 +8,7 @@
     <Copyright>Copyright © Wonkysattva 2023</Copyright>
     <Description>This client library provides a binary heap implementation.</Description>
     <Icon>wonkysattva.png</Icon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Tags>collections, heap, minheap, maxheap, binary heap</Tags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <IncludeSymbols>true</IncludeSymbols>
@@ -21,6 +22,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
