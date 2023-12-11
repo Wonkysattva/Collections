@@ -49,7 +49,12 @@ namespace Wonkysattva.Collections.Generic
         public BinaryHeap(int capacity, IComparer<TItem> comparer)
         {
             _heap = new List<TItem>(capacity);
+
+#if NETSTANDARD2_0
             _comparer = comparer ?? throw new ArgumentNullException(nameof(comparer));
+#else
+            _comparer = comparer;
+#endif
         }
 
         /// <summary>
@@ -60,8 +65,17 @@ namespace Wonkysattva.Collections.Generic
         /// <exception cref="ArgumentNullException">Thrown when initial or comparer is null</exception>
         public BinaryHeap(IEnumerable<TItem> initial, IComparer<TItem> comparer)
         {
-            _heap = new List<TItem>(initial ?? throw new ArgumentNullException(nameof(initial)));
+#if NETSTANDARD2_0
+            if (initial is null) throw new ArgumentNullException(nameof(initial));
+#endif
+
+            _heap = new List<TItem>(initial);
+
+#if NETSTANDARD2_0
             _comparer = comparer ?? throw new ArgumentNullException(nameof(comparer));
+#else
+            _comparer = comparer;
+#endif
 
             for (var i = _heap.Count / 2; i >= 0; ++i)
             {
@@ -75,7 +89,12 @@ namespace Wonkysattva.Collections.Generic
         /// <param name="other">The binary heap to copy</param>
         public BinaryHeap(BinaryHeap<TItem> other)
         {
+#if NET8_0_OR_GREATER
+            _heap = [.. other._heap];
+#else
             _heap = other._heap.ToList();
+#endif
+
             _comparer = other._comparer;
         }
 
@@ -87,7 +106,9 @@ namespace Wonkysattva.Collections.Generic
         /// <inheritdoc />
         public void Push(TItem item)
         {
+#if NETSTANDARD2_0
             if (item == null) throw new ArgumentNullException(nameof(item));
+#endif
 
             _heap.Add(item);
             BubbleUp(_heap.Count - 1);
@@ -118,7 +139,9 @@ namespace Wonkysattva.Collections.Generic
         /// <returns>The first element from the heap after pushing</returns>
         public TItem PushPop(TItem item)
         {
+#if NETSTANDARD2_0
             if (item == null) throw new ArgumentNullException(nameof(item));
+#endif
 
             if (_heap.Count == 0 || _comparer.Compare(item, _heap[0]) <= 0)
             {
