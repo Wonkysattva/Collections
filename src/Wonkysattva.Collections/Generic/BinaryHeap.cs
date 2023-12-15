@@ -63,7 +63,7 @@ public class BinaryHeap<TItem> : IBinaryHeap<TItem>, IReadOnlyCollection<TItem>
         _heap = new List<TItem>(initial);
         _comparer = comparer;
 
-        for (var i = _heap.Count / 2; i >= 0; ++i)
+        for (var i = _heap.Count / 2; i >= 0; --i)
         {
             BubbleDown(i);
         }

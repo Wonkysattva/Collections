@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wonkysattva.Collections", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{65597133-427D-4C8B-AA05-07ED3EFEBDBF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D7667F9F-915B-4BE7-882B-85795F2181AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wonkysattva.Collections.Tests", "test\Wonkysattva.Collections.Tests\Wonkysattva.Collections.Tests.csproj", "{6B494F70-CADA-4900-89D2-0713D62A197E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{FAE3E213-2AA4-4088-B098-54BF750D6A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE3E213-2AA4-4088-B098-54BF750D6A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE3E213-2AA4-4088-B098-54BF750D6A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B494F70-CADA-4900-89D2-0713D62A197E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B494F70-CADA-4900-89D2-0713D62A197E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B494F70-CADA-4900-89D2-0713D62A197E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B494F70-CADA-4900-89D2-0713D62A197E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FAE3E213-2AA4-4088-B098-54BF750D6A65} = {65597133-427D-4C8B-AA05-07ED3EFEBDBF}
+		{6B494F70-CADA-4900-89D2-0713D62A197E} = {D7667F9F-915B-4BE7-882B-85795F2181AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F03BB5A-A3FB-40C0-A14E-14FDD2DC268A}
