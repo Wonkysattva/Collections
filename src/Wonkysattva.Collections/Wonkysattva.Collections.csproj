@@ -7,7 +7,6 @@
     <Authors>Wonkysattva</Authors>
     <Copyright>Copyright © Wonkysattva 2023</Copyright>
     <Description>This client library provides a binary heap implementation.</Description>
-    <Icon>wonkysattva.png</Icon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Tags>collections, heap, minheap, maxheap, binary heap</Tags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -31,6 +30,7 @@
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="wonkysattva.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
